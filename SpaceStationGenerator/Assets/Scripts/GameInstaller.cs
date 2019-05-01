@@ -9,10 +9,13 @@ public class GameInstaller : MonoInstaller {
         Container.BindInterfacesAndSelfTo<PlayerController>()
             .FromComponentInNewPrefab(_gameSettings.PlayerController)
             .AsSingle().NonLazy();
+        Container.BindInterfacesAndSelfTo<Structure>()
+            .FromComponentInNewPrefab(_gameSettings.Structure)
+            .AsSingle().NonLazy();
         //Container.Bind<Vehicule>()
         //    .FromResolveGetter<PlayerController>(playerController => playerController.GetVehicule())
         //    .AsSingle().NonLazy();
-        //Container.Bind<GemFactory>()
-        //    .AsSingle().NonLazy();
+        Container.Bind<ModuleFactory>()
+            .AsSingle().NonLazy();
     }
 }
