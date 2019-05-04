@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: fda035f881148d44f85c87a1032dde84, type: 3}
       propertyPath: m_Name
-      value: Connection
+      value: Connection Variant
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fda035f881148d44f85c87a1032dde84, type: 3}
       propertyPath: m_LocalPosition.x
