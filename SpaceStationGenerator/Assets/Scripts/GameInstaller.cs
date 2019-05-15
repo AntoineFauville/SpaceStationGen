@@ -15,7 +15,7 @@ public class GameInstaller : MonoInstaller {
         //Container.Bind<Vehicule>()
         //    .FromResolveGetter<PlayerController>(playerController => playerController.GetVehicule())
         //    .AsSingle().NonLazy();
-        Container.Bind<ModuleFactory>()
+        Container.Bind<EntityFactory>()
             .AsSingle().NonLazy();
     }
 }

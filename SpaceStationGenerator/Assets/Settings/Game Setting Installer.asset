@@ -17,10 +17,10 @@ MonoBehaviour:
       type: 3}
     Structure: {fileID: 4923577769606372705, guid: f877e667efc184b4db673a4ceb385f66,
       type: 3}
-    Module: {fileID: 1620500051104442211, guid: e59994292f0801c4aaa8c87d95c898e8,
+    Module: {fileID: 6555040073894652251, guid: 2477c99af0a7b364c8ddc07c47157797,
       type: 3}
-    PointInSpace: {fileID: 1866547997867961011, guid: 2477c99af0a7b364c8ddc07c47157797,
+    SpaceStationModule: {fileID: 1620500051104442208, guid: e59994292f0801c4aaa8c87d95c898e8,
       type: 3}
-    GridSize: 7
+    GridSize: {x: 6, y: 6, z: 6}
     ModuleSpacing: 7
-    ModuleAmount: 10
+    ModuleAmount: 6

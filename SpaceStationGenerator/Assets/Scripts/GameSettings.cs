@@ -9,10 +9,11 @@ public class GameSettings
 
     [Header("Structure")]
     public Structure Structure;
-    public Module Module;
+    public Entity Module;
+    public GameObject SpaceStationModule;
 
-    public GameObject PointInSpace;
-    public int GridSize = 5;
+    //public Spacepoint PointInSpace;
+    public Vector3 GridSize = new Vector3(5,5,5);
     public int ModuleSpacing = 7;
     public int ModuleAmount = 20;
 }
