@@ -5,17 +5,14 @@ using UnityEngine;
 public class GameSettings
 {
     [Header("Player")]
-    public PlayerController PlayerController;
+    public PlayerControllerFPS PlayerController;
 
     [Header("Structure")]
     public Structure Structure;
     public Module Module;
-    public int ModuleAmount = 5;
-    public Vector3 initialPosition = new Vector3(0, 0, 0);
-    public float ModuleSpacing = 3;
-    public GameObject Connection;
-    public float ConnectionOffset = 0.5f;
 
-    public int BoxChance = 50;
-    public GameObject StorageBox;
+    public GameObject PointInSpace;
+    public int GridSize = 5;
+    public int ModuleSpacing = 7;
+    public int ModuleAmount = 20;
 }

@@ -4,6 +4,5 @@ using UnityEngine;
 
 public class Connection : MonoBehaviour
 {
-    public Module ConnectedModule;
-    public Module MyModule;
+
 }

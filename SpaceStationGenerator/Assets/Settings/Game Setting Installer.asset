@@ -13,18 +13,14 @@ MonoBehaviour:
   m_Name: Game Setting Installer
   m_EditorClassIdentifier: 
   GameSettings:
-    PlayerController: {fileID: 5824122143438975781, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    PlayerController: {fileID: 6888534463254154489, guid: 344a6c82e657a754b96885f5841933cd,
       type: 3}
     Structure: {fileID: 4923577769606372705, guid: f877e667efc184b4db673a4ceb385f66,
       type: 3}
     Module: {fileID: 1620500051104442211, guid: e59994292f0801c4aaa8c87d95c898e8,
       type: 3}
-    ModuleAmount: 100
-    initialPosition: {x: 0, y: 0, z: 0}
-    ModuleSpacing: 3
-    Connection: {fileID: 6752449225054726426, guid: ef614f5518906a846996e6d2fb01ded5,
+    PointInSpace: {fileID: 1866547997867961011, guid: 2477c99af0a7b364c8ddc07c47157797,
       type: 3}
-    ConnectionOffset: 0.5
-    BoxChance: 40
-    StorageBox: {fileID: 3684999988468689286, guid: 01a2b19772f7ed342b2bd7cc9ce98e26,
-      type: 3}
+    GridSize: 7
+    ModuleSpacing: 7
+    ModuleAmount: 10

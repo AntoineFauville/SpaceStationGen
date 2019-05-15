@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 using Zenject;
 
 public class Structure : MonoBehaviour
@@ -8,85 +9,125 @@ public class Structure : MonoBehaviour
     [Inject] private ModuleFactory ModuleFactory;
     [Inject] private GameSettings _gameSettings;
 
-    List<Module> modules = new List<Module>();
-    List<Connection> freeConnections = new List<Connection>();
+    public GameObject freePointParent;
+    public GameObject ModuleParent;
 
-    void Start()
+    public List<Module> modules = new List<Module>();
+
+    public List<Vector3> freePoints = new List<Vector3>();
+
+    public void CreateSpaceStation()
     {
-        //base module creation
-        Module baseModule = ModuleFactory.CreateStartingModule(_gameSettings.initialPosition, this.transform);
-        modules.Add(baseModule);
-        //assign the parent module to the connection
-        for (int i = 0; i < baseModule.Connections.Length; i++)
+        Vector3 position = new Vector3();
+        Vector3 initialPosition = new Vector3((_gameSettings.GridSize/2)* _gameSettings.ModuleSpacing,
+                                        (_gameSettings.GridSize / 2)*_gameSettings.ModuleSpacing,
+                                        (_gameSettings.GridSize / 2) * _gameSettings.ModuleSpacing);
+
+        for (int h = 0; h < _gameSettings.GridSize; h++)
         {
-            baseModule.Connections[i].MyModule = baseModule;
+            for (int y = 0; y < _gameSettings.GridSize; y++)
+            {
+                for (int x = 0; x < _gameSettings.GridSize; x++)
+                {
+                    position = new Vector3(x * _gameSettings.ModuleSpacing, h * _gameSettings.ModuleSpacing, y * _gameSettings.ModuleSpacing);
+
+                    if (position == initialPosition)
+                    {
+                        Module baseModule = ModuleFactory.CreateModule(position, ModuleParent.transform);
+                        modules.Add(baseModule);
+                    }
+                    else
+                    {
+                        GameObject point = Object.Instantiate(_gameSettings.PointInSpace);
+                        point.transform.SetParent(freePointParent.transform);
+                        point.transform.position = position;
+
+                        point.name = "(" + position.x.ToString() + ",0, " + position.y.ToString() + ",0, " + position.z.ToString() + ",0)";
+
+                        freePoints.Add(position);
+                    }
+                }
+            }
         }
 
         for (int i = 0; i < _gameSettings.ModuleAmount; i++)
         {
-            //get all the free connections
-            GetFreeConnections();
-            //get all the free space where i can create a new module, choose randomly between free connection, and place the module
-            Connection currentConnection = freeConnections[Random.Range(0, freeConnections.Count)];
-        
-            //generate the module
-            Module node = ModuleFactory.CreateModule(currentConnection, this.transform);
-            //assign the parent module to the connection
-            for (int y = 0; y < node.Connections.Length; y++)
-            {
-                node.Connections[y].MyModule = node;
-            }
-            currentConnection.ConnectedModule = node;
-            modules.Add(node);
-            
-        }
 
-        for (int i = 0; i < modules.Count; i++)
-        {
-            PlaceConnectionsVisuals(modules[i]);
-            PlaceStorageBoxes(modules[i]);
+            Vector3 a;
+
+            a = GetFreeNeighbours()[Random.Range(0,GetFreeNeighbours().Count)];
+
+            if (freePoints.Contains(a))
+            {
+                Module Module = ModuleFactory.CreateModule(a, ModuleParent.transform);
+                modules.Add(Module);
+                freePoints.Remove(a);
+                DestroyImmediate(GameObject.Find(a.ToString()));
+            }
         }
-       
     }
     
     public void GetFreeConnections()
     {
+       
+    }
+
+    public void PlaceConnectionsVisuals()
+    {
+        
+    }
+
+    public void PlaceStorageBoxes()
+    {
+        
+    }
+
+    public List<Vector3> GetFreeNeighbours()
+    {
+        List<Vector3> freeSpots = new List<Vector3>();
+
         for (int i = 0; i < modules.Count; i++)
         {
-            for (int y = 0; y < modules[i].Connections.Length; y++)
+            //check all neighbours
+            Vector3 possibleSpot = new Vector3();
+            //+x
+            possibleSpot = modules[i].transform.position + new Vector3(1 * _gameSettings.ModuleSpacing, 0, 0);
+            if (freePoints.Contains(possibleSpot))
             {
-                if(modules[i].Connections[y].ConnectedModule == null)
-                {
-                    freeConnections.Add(modules[i].Connections[y]);
-                }
+                freeSpots.Add(possibleSpot);
+            }
+            //-x
+            possibleSpot = modules[i].transform.position + new Vector3(-1 * _gameSettings.ModuleSpacing, 0, 0);
+            if (freePoints.Contains(possibleSpot))
+            {
+                freeSpots.Add(possibleSpot);
+            }
+            //+y
+            possibleSpot = modules[i].transform.position + new Vector3(0, 1 * _gameSettings.ModuleSpacing, 0);
+            if (freePoints.Contains(possibleSpot))
+            {
+                freeSpots.Add(possibleSpot);
+            }
+            //-y
+            possibleSpot = modules[i].transform.position + new Vector3(0, -1 * _gameSettings.ModuleSpacing, 0);
+            if (freePoints.Contains(possibleSpot))
+            {
+                freeSpots.Add(possibleSpot);
+            }
+            //+z
+            possibleSpot = modules[i].transform.position + new Vector3(0, 0, -1 * _gameSettings.ModuleSpacing);
+            if (freePoints.Contains(possibleSpot))
+            {
+                freeSpots.Add(possibleSpot);
+            }
+            //-z
+            possibleSpot = modules[i].transform.position + new Vector3(0, 0, 1 * _gameSettings.ModuleSpacing);
+            if (freePoints.Contains(possibleSpot))
+            {
+                freeSpots.Add(possibleSpot);
             }
         }
-    }
-
-    public void PlaceConnectionsVisuals(Module module)
-    {
-        for (int i = 0; i < module.Connections.Length; i++)
-        {
-            if (module.Connections[i].ConnectedModule != null)
-            {
-                GameObject connection = Object.Instantiate(_gameSettings.Connection);
-                connection.transform.SetParent(module.Connections[i].transform);
-                connection.transform.rotation = module.Connections[i].transform.rotation;
-                connection.transform.localPosition = new Vector3(0, 0, 0 + _gameSettings.ConnectionOffset);
-            }
-        }
-    }
-
-    public void PlaceStorageBoxes(Module module)
-    {
-        for (int i = 0; i < module.StorageBoxes.Length; i++)
-        {
-            if (_gameSettings.BoxChance > Random.Range(0, 100))
-            {
-                GameObject storage = Object.Instantiate(_gameSettings.StorageBox);
-                storage.transform.SetParent(module.StorageBoxes[i].transform);
-                storage.transform.localPosition = new Vector3(0, 0, 0);
-            }
-        }
+            
+        return freeSpots;
     }
 }
