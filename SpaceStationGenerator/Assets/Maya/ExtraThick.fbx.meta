@@ -1,0 +1,203 @@
+fileFormatVersion: 2
+guid: 7b4ff70f8dfe4b5479ba49a83fb78483
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: group4
+    100004: group5
+    100006: Reinforcemen_t
+    100008: Station2
+    100010: Station3
+    100012: Storage13
+    100014: Storage13 1
+    100016: Storage14
+    100018: Storage14 1
+    100020: Storage15
+    100022: Storage15 1
+    100024: Storage16
+    100026: Storage17
+    100028: Storage18
+    100030: Storage19
+    100032: Storage20
+    100034: Storage21
+    100036: Storage22
+    100038: Storage23
+    100040: Storage24
+    100042: Storage25
+    100044: Storage26
+    100046: Storage27
+    400000: //RootNode
+    400002: group4
+    400004: group5
+    400006: Reinforcemen_t
+    400008: Station2
+    400010: Station3
+    400012: Storage13
+    400014: Storage13 1
+    400016: Storage14
+    400018: Storage14 1
+    400020: Storage15
+    400022: Storage15 1
+    400024: Storage16
+    400026: Storage17
+    400028: Storage18
+    400030: Storage19
+    400032: Storage20
+    400034: Storage21
+    400036: Storage22
+    400038: Storage23
+    400040: Storage24
+    400042: Storage25
+    400044: Storage26
+    400046: Storage27
+    2100000: lambert1
+    2300000: Reinforcemen_t
+    2300002: Station2
+    2300004: Station3
+    2300006: Storage13
+    2300008: Storage13 1
+    2300010: Storage14
+    2300012: Storage14 1
+    2300014: Storage15
+    2300016: Storage15 1
+    2300018: Storage16
+    2300020: Storage17
+    2300022: Storage18
+    2300024: Storage19
+    2300026: Storage20
+    2300028: Storage21
+    2300030: Storage22
+    2300032: Storage23
+    2300034: Storage24
+    2300036: Storage25
+    2300038: Storage26
+    2300040: Storage27
+    3300000: Reinforcemen_t
+    3300002: Station2
+    3300004: Station3
+    3300006: Storage13
+    3300008: Storage13 1
+    3300010: Storage14
+    3300012: Storage14 1
+    3300014: Storage15
+    3300016: Storage15 1
+    3300018: Storage16
+    3300020: Storage17
+    3300022: Storage18
+    3300024: Storage19
+    3300026: Storage20
+    3300028: Storage21
+    3300030: Storage22
+    3300032: Storage23
+    3300034: Storage24
+    3300036: Storage25
+    3300038: Storage26
+    3300040: Storage27
+    4300000: Reinforcemen_t
+    4300002: Station3
+    4300004: Station2
+    4300006: Storage13
+    4300008: Storage14
+    4300010: Storage15
+    4300012: Storage13
+    4300014: Storage14
+    4300016: Storage15
+    4300018: Storage27
+    4300020: Storage26
+    4300022: Storage25
+    4300024: Storage24
+    4300026: Storage16
+    4300028: Storage17
+    4300030: Storage18
+    4300032: Storage19
+    4300034: Storage20
+    4300036: Storage21
+    4300038: Storage22
+    4300040: Storage23
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 1
+    tangentImportMode: 2
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

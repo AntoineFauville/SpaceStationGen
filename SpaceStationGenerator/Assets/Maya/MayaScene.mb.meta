@@ -7,23 +7,467 @@ ModelImporter:
     100002: Connection
     100004: Station
     100006: Storage
+    100008: group1
+    100010: pCube1
+    100012: pCube10
+    100014: pCube12
+    100016: pCube13
+    100018: pCube14
+    100020: pCube15
+    100022: pCube16
+    100024: pCube17
+    100026: pCube8
+    100028: pCube9
+    100030: pCylinder1
+    100032: SolarPanels
+    100034: Station1
+    100036: pCube18
+    100038: pCube19
+    100040: Station2
+    100042: Connection1
+    100044: Connection2
+    100046: Connection3
+    100048: Connection4
+    100050: Life
+    100052: pCube20
+    100054: pCube21
+    100056: pCube22
+    100058: pCube23
+    100060: Station2 1
+    100062: Storage1
+    100064: Storage2
+    100066: Storage3
+    100068: Storage4
+    100070: Storage10
+    100072: Storage11
+    100074: Storage12
+    100076: Storage5
+    100078: Storage6
+    100080: Storage7
+    100082: Storage8
+    100084: Storage9
+    100086: pCube24
+    100088: pCube25
+    100090: pCube26
+    100092: pCube27
+    100094: pCube28
+    100096: pCube29
+    100098: pCube30
+    100100: pCube31
+    100102: pCube32
+    100104: pCube33
+    100106: Connection1 1
+    100108: Connection2 1
+    100110: Connection3 1
+    100112: Connection4 1
+    100114: group2
+    100116: group3
+    100118: pCube10 1
+    100120: pCube12 1
+    100122: pCube13 1
+    100124: pCube14 1
+    100126: pCube15 1
+    100128: pCube16 1
+    100130: pCube17 1
+    100132: pCube20 1
+    100134: pCube21 1
+    100136: pCube22 1
+    100138: pCube23 1
+    100140: pCube24 1
+    100142: pCube25 1
+    100144: pCube26 1
+    100146: pCube27 1
+    100148: pCube28 1
+    100150: pCube29 1
+    100152: pCube30 1
+    100154: pCube31 1
+    100156: pCube32 1
+    100158: pCube33 1
+    100160: pCube34
+    100162: pCube8 1
+    100164: pCube9 1
+    100166: Smaller
+    100168: Station2 2
+    100170: Storage10 1
+    100172: Storage11 1
+    100174: Storage12 1
+    100176: Storage5 1
+    100178: Storage6 1
+    100180: Storage7 1
+    100182: Storage8 1
+    100184: Storage9 1
+    100186: Large
+    100188: Reinforcemen_t
+    100190: Station2 3
+    100192: Station3
     400000: //RootNode
     400002: Connection
     400004: Station
     400006: Storage
+    400008: group1
+    400010: pCube1
+    400012: pCube10
+    400014: pCube12
+    400016: pCube13
+    400018: pCube14
+    400020: pCube15
+    400022: pCube16
+    400024: pCube17
+    400026: pCube8
+    400028: pCube9
+    400030: pCylinder1
+    400032: SolarPanels
+    400034: Station1
+    400036: pCube18
+    400038: pCube19
+    400040: Station2
+    400042: Connection1
+    400044: Connection2
+    400046: Connection3
+    400048: Connection4
+    400050: Life
+    400052: pCube20
+    400054: pCube21
+    400056: pCube22
+    400058: pCube23
+    400060: Station2 1
+    400062: Storage1
+    400064: Storage2
+    400066: Storage3
+    400068: Storage4
+    400070: Storage10
+    400072: Storage11
+    400074: Storage12
+    400076: Storage5
+    400078: Storage6
+    400080: Storage7
+    400082: Storage8
+    400084: Storage9
+    400086: pCube24
+    400088: pCube25
+    400090: pCube26
+    400092: pCube27
+    400094: pCube28
+    400096: pCube29
+    400098: pCube30
+    400100: pCube31
+    400102: pCube32
+    400104: pCube33
+    400106: Connection1 1
+    400108: Connection2 1
+    400110: Connection3 1
+    400112: Connection4 1
+    400114: group2
+    400116: group3
+    400118: pCube10 1
+    400120: pCube12 1
+    400122: pCube13 1
+    400124: pCube14 1
+    400126: pCube15 1
+    400128: pCube16 1
+    400130: pCube17 1
+    400132: pCube20 1
+    400134: pCube21 1
+    400136: pCube22 1
+    400138: pCube23 1
+    400140: pCube24 1
+    400142: pCube25 1
+    400144: pCube26 1
+    400146: pCube27 1
+    400148: pCube28 1
+    400150: pCube29 1
+    400152: pCube30 1
+    400154: pCube31 1
+    400156: pCube32 1
+    400158: pCube33 1
+    400160: pCube34
+    400162: pCube8 1
+    400164: pCube9 1
+    400166: Smaller
+    400168: Station2 2
+    400170: Storage10 1
+    400172: Storage11 1
+    400174: Storage12 1
+    400176: Storage5 1
+    400178: Storage6 1
+    400180: Storage7 1
+    400182: Storage8 1
+    400184: Storage9 1
+    400186: Large
+    400188: Reinforcemen_t
+    400190: Station2 3
+    400192: Station3
     2100000: lambert1
     2300000: //RootNode
     2300002: Connection
     2300004: Station
     2300006: Storage
+    2300008: pCube1
+    2300010: pCube10
+    2300012: pCube12
+    2300014: pCube13
+    2300016: pCube14
+    2300018: pCube15
+    2300020: pCube16
+    2300022: pCube17
+    2300024: pCube8
+    2300026: pCube9
+    2300028: pCylinder1
+    2300030: Station1
+    2300032: pCube18
+    2300034: pCube19
+    2300036: Station2
+    2300038: Connection1
+    2300040: Connection2
+    2300042: Connection3
+    2300044: Connection4
+    2300046: pCube20
+    2300048: pCube21
+    2300050: pCube22
+    2300052: pCube23
+    2300054: Station2 1
+    2300056: Storage1
+    2300058: Storage2
+    2300060: Storage3
+    2300062: Storage4
+    2300064: Storage10
+    2300066: Storage11
+    2300068: Storage12
+    2300070: Storage5
+    2300072: Storage6
+    2300074: Storage7
+    2300076: Storage8
+    2300078: Storage9
+    2300080: pCube24
+    2300082: pCube25
+    2300084: pCube26
+    2300086: pCube27
+    2300088: pCube28
+    2300090: pCube29
+    2300092: pCube30
+    2300094: pCube31
+    2300096: pCube32
+    2300098: pCube33
+    2300100: Connection1 1
+    2300102: Connection2 1
+    2300104: Connection3 1
+    2300106: Connection4 1
+    2300108: pCube10 1
+    2300110: pCube12 1
+    2300112: pCube13 1
+    2300114: pCube14 1
+    2300116: pCube15 1
+    2300118: pCube16 1
+    2300120: pCube17 1
+    2300122: pCube20 1
+    2300124: pCube21 1
+    2300126: pCube22 1
+    2300128: pCube23 1
+    2300130: pCube24 1
+    2300132: pCube25 1
+    2300134: pCube26 1
+    2300136: pCube27 1
+    2300138: pCube28 1
+    2300140: pCube29 1
+    2300142: pCube30 1
+    2300144: pCube31 1
+    2300146: pCube32 1
+    2300148: pCube33 1
+    2300150: pCube34
+    2300152: pCube8 1
+    2300154: pCube9 1
+    2300156: Station2 2
+    2300158: Storage10 1
+    2300160: Storage11 1
+    2300162: Storage12 1
+    2300164: Storage5 1
+    2300166: Storage6 1
+    2300168: Storage7 1
+    2300170: Storage8 1
+    2300172: Storage9 1
+    2300174: Reinforcemen_t
+    2300176: Station2 3
+    2300178: Station3
     3300000: //RootNode
     3300002: Connection
     3300004: Station
     3300006: Storage
+    3300008: pCube1
+    3300010: pCube10
+    3300012: pCube12
+    3300014: pCube13
+    3300016: pCube14
+    3300018: pCube15
+    3300020: pCube16
+    3300022: pCube17
+    3300024: pCube8
+    3300026: pCube9
+    3300028: pCylinder1
+    3300030: Station1
+    3300032: pCube18
+    3300034: pCube19
+    3300036: Station2
+    3300038: Connection1
+    3300040: Connection2
+    3300042: Connection3
+    3300044: Connection4
+    3300046: pCube20
+    3300048: pCube21
+    3300050: pCube22
+    3300052: pCube23
+    3300054: Station2 1
+    3300056: Storage1
+    3300058: Storage2
+    3300060: Storage3
+    3300062: Storage4
+    3300064: Storage10
+    3300066: Storage11
+    3300068: Storage12
+    3300070: Storage5
+    3300072: Storage6
+    3300074: Storage7
+    3300076: Storage8
+    3300078: Storage9
+    3300080: pCube24
+    3300082: pCube25
+    3300084: pCube26
+    3300086: pCube27
+    3300088: pCube28
+    3300090: pCube29
+    3300092: pCube30
+    3300094: pCube31
+    3300096: pCube32
+    3300098: pCube33
+    3300100: Connection1 1
+    3300102: Connection2 1
+    3300104: Connection3 1
+    3300106: Connection4 1
+    3300108: pCube10 1
+    3300110: pCube12 1
+    3300112: pCube13 1
+    3300114: pCube14 1
+    3300116: pCube15 1
+    3300118: pCube16 1
+    3300120: pCube17 1
+    3300122: pCube20 1
+    3300124: pCube21 1
+    3300126: pCube22 1
+    3300128: pCube23 1
+    3300130: pCube24 1
+    3300132: pCube25 1
+    3300134: pCube26 1
+    3300136: pCube27 1
+    3300138: pCube28 1
+    3300140: pCube29 1
+    3300142: pCube30 1
+    3300144: pCube31 1
+    3300146: pCube32 1
+    3300148: pCube33 1
+    3300150: pCube34
+    3300152: pCube8 1
+    3300154: pCube9 1
+    3300156: Station2 2
+    3300158: Storage10 1
+    3300160: Storage11 1
+    3300162: Storage12 1
+    3300164: Storage5 1
+    3300166: Storage6 1
+    3300168: Storage7 1
+    3300170: Storage8 1
+    3300172: Storage9 1
+    3300174: Reinforcemen_t
+    3300176: Station2 3
+    3300178: Station3
     4300000: pCube1
     4300002: Station
     4300004: Connection
     4300006: Storage
+    4300008: Station1
+    4300010: pCube10
+    4300012: pCube8
+    4300014: pCube9
+    4300016: pCylinder1
+    4300018: pCube12
+    4300020: pCube13
+    4300022: pCube14
+    4300024: pCube15
+    4300026: pCube16
+    4300028: pCube17
+    4300030: pCube18
+    4300032: pCube19
+    4300034: Station2
+    4300036: Connection1
+    4300038: Connection4
+    4300040: Station2
+    4300042: Connection3
+    4300044: Connection2
+    4300046: Storage4
+    4300048: Storage3
+    4300050: Storage2
+    4300052: pCube20
+    4300054: Storage1
+    4300056: pCube21
+    4300058: pCube22
+    4300060: pCube23
+    4300062: Storage5
+    4300064: Storage6
+    4300066: Storage7
+    4300068: Storage8
+    4300070: Storage9
+    4300072: Storage10
+    4300074: Storage11
+    4300076: Storage12
+    4300078: pCube24
+    4300080: pCube25
+    4300082: pCube26
+    4300084: pCube27
+    4300086: pCube28
+    4300088: pCube29
+    4300090: pCube30
+    4300092: pCube31
+    4300094: pCube32
+    4300096: pCube33
+    4300098: pCube34
+    4300100: pCube10
+    4300102: pCube8
+    4300104: pCube9
+    4300106: pCube12
+    4300108: pCube13
+    4300110: pCube14
+    4300112: pCube15
+    4300114: pCube16
+    4300116: pCube17
+    4300118: pCube24
+    4300120: pCube25
+    4300122: pCube26
+    4300124: pCube27
+    4300126: pCube28
+    4300128: pCube29
+    4300130: pCube30
+    4300132: pCube31
+    4300134: pCube32
+    4300136: pCube33
+    4300138: Connection1
+    4300140: Connection4
+    4300142: Station2
+    4300144: Connection3
+    4300146: Connection2
+    4300148: pCube20
+    4300150: pCube21
+    4300152: pCube22
+    4300154: pCube23
+    4300156: Storage5
+    4300158: Storage6
+    4300160: Storage7
+    4300162: Storage8
+    4300164: Storage9
+    4300166: Storage10
+    4300168: Storage11
+    4300170: Storage12
+    4300172: Reinforcemen_t
+    4300174: Station3
+    4300176: Station2
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -85,7 +529,7 @@ ModelImporter:
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
-    normalSmoothingSource: 0
+    normalSmoothingSource: 3
   importAnimation: 1
   copyAvatar: 0
   humanDescription:

@@ -1,19 +1,97 @@
 fileFormatVersion: 2
-guid: 6c8206f9076e3b54e9c422fd2f3f77ba
+guid: 2981968aef32fe14bafff27117020c44
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Station2
-    400000: //RootNode
-    400002: Station2
+    100000: Connection1
+    100002: Connection2
+    100004: Connection3
+    100006: Connection4
+    100008: //RootNode
+    100010: pCube20
+    100012: pCube21
+    100014: pCube22
+    100016: pCube23
+    100018: Station2
+    100020: Storage10
+    100022: Storage11
+    100024: Storage12
+    100026: Storage5
+    100028: Storage6
+    100030: Storage7
+    100032: Storage8
+    100034: Storage9
+    400000: Connection1
+    400002: Connection2
+    400004: Connection3
+    400006: Connection4
+    400008: //RootNode
+    400010: pCube20
+    400012: pCube21
+    400014: pCube22
+    400016: pCube23
+    400018: Station2
+    400020: Storage10
+    400022: Storage11
+    400024: Storage12
+    400026: Storage5
+    400028: Storage6
+    400030: Storage7
+    400032: Storage8
+    400034: Storage9
     2100000: lambert1
-    2300000: //RootNode
-    2300002: Station2
-    3300000: //RootNode
-    3300002: Station2
-    4300000: Station
-    4300002: Station2
+    2300000: Connection1
+    2300002: Connection2
+    2300004: Connection3
+    2300006: Connection4
+    2300008: pCube20
+    2300010: pCube21
+    2300012: pCube22
+    2300014: pCube23
+    2300016: Station2
+    2300018: Storage10
+    2300020: Storage11
+    2300022: Storage12
+    2300024: Storage5
+    2300026: Storage6
+    2300028: Storage7
+    2300030: Storage8
+    2300032: Storage9
+    3300000: Connection1
+    3300002: Connection2
+    3300004: Connection3
+    3300006: Connection4
+    3300008: pCube20
+    3300010: pCube21
+    3300012: pCube22
+    3300014: pCube23
+    3300016: Station2
+    3300018: Storage10
+    3300020: Storage11
+    3300022: Storage12
+    3300024: Storage5
+    3300026: Storage6
+    3300028: Storage7
+    3300030: Storage8
+    3300032: Storage9
+    4300000: Connection1
+    4300002: Connection4
+    4300004: Station2
+    4300006: Connection3
+    4300008: Connection2
+    4300010: pCube20
+    4300012: pCube21
+    4300014: pCube22
+    4300016: pCube23
+    4300018: Storage5
+    4300020: Storage6
+    4300022: Storage7
+    4300024: Storage8
+    4300026: Storage9
+    4300028: Storage10
+    4300030: Storage11
+    4300032: Storage12
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -69,7 +147,7 @@ ModelImporter:
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
-    normalSmoothAngle: 0
+    normalSmoothAngle: 60
     normalImportMode: 1
     tangentImportMode: 2
     normalCalculationMode: 4

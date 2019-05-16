@@ -1,0 +1,200 @@
+fileFormatVersion: 2
+guid: 54d0f6ac8ed104e4190e37d4b2788c3b
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Connection1
+    100002: Connection2
+    100004: Connection3
+    100006: Connection4
+    100008: //RootNode
+    100010: pCube20
+    100012: pCube21
+    100014: pCube22
+    100016: pCube23
+    100018: Station2
+    100020: Storage1
+    100022: Storage2
+    100024: Storage3
+    100026: Storage4
+    100028: Storage10
+    100030: Storage11
+    100032: Storage12
+    100034: Storage5
+    100036: Storage6
+    100038: Storage7
+    100040: Storage8
+    100042: Storage9
+    400000: Connection1
+    400002: Connection2
+    400004: Connection3
+    400006: Connection4
+    400008: //RootNode
+    400010: pCube20
+    400012: pCube21
+    400014: pCube22
+    400016: pCube23
+    400018: Station2
+    400020: Storage1
+    400022: Storage2
+    400024: Storage3
+    400026: Storage4
+    400028: Storage10
+    400030: Storage11
+    400032: Storage12
+    400034: Storage5
+    400036: Storage6
+    400038: Storage7
+    400040: Storage8
+    400042: Storage9
+    2100000: lambert1
+    2300000: Connection1
+    2300002: Connection2
+    2300004: Connection3
+    2300006: Connection4
+    2300008: pCube20
+    2300010: pCube21
+    2300012: pCube22
+    2300014: pCube23
+    2300016: Station2
+    2300018: Storage1
+    2300020: Storage2
+    2300022: Storage3
+    2300024: Storage4
+    2300026: Storage10
+    2300028: Storage11
+    2300030: Storage12
+    2300032: Storage5
+    2300034: Storage6
+    2300036: Storage7
+    2300038: Storage8
+    2300040: Storage9
+    3300000: Connection1
+    3300002: Connection2
+    3300004: Connection3
+    3300006: Connection4
+    3300008: pCube20
+    3300010: pCube21
+    3300012: pCube22
+    3300014: pCube23
+    3300016: Station2
+    3300018: Storage1
+    3300020: Storage2
+    3300022: Storage3
+    3300024: Storage4
+    3300026: Storage10
+    3300028: Storage11
+    3300030: Storage12
+    3300032: Storage5
+    3300034: Storage6
+    3300036: Storage7
+    3300038: Storage8
+    3300040: Storage9
+    4300000: Connection1
+    4300002: Connection4
+    4300004: Station2
+    4300006: Connection3
+    4300008: Connection2
+    4300010: Storage4
+    4300012: Storage3
+    4300014: Storage2
+    4300016: pCube20
+    4300018: Storage1
+    4300020: pCube21
+    4300022: pCube22
+    4300024: pCube23
+    4300026: Storage5
+    4300028: Storage6
+    4300030: Storage7
+    4300032: Storage8
+    4300034: Storage9
+    4300036: Storage10
+    4300038: Storage11
+    4300040: Storage12
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 100
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

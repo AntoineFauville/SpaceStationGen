@@ -68,6 +68,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
             }
 
+            
+
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
             {
                 StartCoroutine(m_JumpBob.DoBobCycle());
@@ -98,6 +100,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             GetInput(out speed);
             // always move along the camera forward as it is the direction that it being aimed at
             Vector3 desiredMove = transform.forward*m_Input.y + transform.right*m_Input.x;
+
+            
 
             // get a normal for the surface that is being touched to move along it
             RaycastHit hitInfo;
@@ -131,6 +135,16 @@ namespace UnityStandardAssets.Characters.FirstPerson
             UpdateCameraPosition(speed);
 
             m_MouseLook.UpdateCursorLock();
+
+            if (CrossPlatformInputManager.GetButton("Jump"))
+            {
+                transform.Translate(Vector3.up * speed * Time.deltaTime);
+            }
+
+            if (CrossPlatformInputManager.GetButton("Crouch"))
+            {
+                transform.Translate(Vector3.down * speed * Time.deltaTime);
+            }
         }
 
 

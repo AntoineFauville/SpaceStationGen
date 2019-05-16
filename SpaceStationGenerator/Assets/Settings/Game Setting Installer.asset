@@ -13,13 +13,27 @@ MonoBehaviour:
   m_Name: Game Setting Installer
   m_EditorClassIdentifier: 
   GameSettings:
-    PlayerController: {fileID: 6888534463254154489, guid: 344a6c82e657a754b96885f5841933cd,
+    PlayerController: {fileID: 1065855277144348514, guid: 16cf200cff0933441b08c6b8b4c2866a,
       type: 3}
     Structure: {fileID: 4923577769606372705, guid: f877e667efc184b4db673a4ceb385f66,
       type: 3}
     Module: {fileID: 6555040073894652251, guid: 2477c99af0a7b364c8ddc07c47157797,
       type: 3}
     SpaceStationModule: {fileID: 1620500051104442208, guid: e59994292f0801c4aaa8c87d95c898e8,
+      type: 3}
+    SpaceStationSmall: {fileID: 7115267973131698823, guid: 22d325dae0e43474e8679f9f55399c16,
+      type: 3}
+    SpaceStationLarge: {fileID: 5272582169239065678, guid: 3a18c80ab03d0e9449fc94f4b6409351,
+      type: 3}
+    SpaceStationThick: {fileID: 8337282473638474605, guid: 78726e7cde651434ebb50d6cc834d870,
+      type: 3}
+    SpaceStationLife: {fileID: 5679376719735367756, guid: 15598e163f8ba0e429e2aa75134a4c5d,
+      type: 3}
+    SpaceStationSolarPanel: {fileID: 1620500051104442208, guid: 71593bf53bcbb424688ad3bac11a6ba1,
+      type: 3}
+    SpaceStationConnection: {fileID: 8176616987690061222, guid: 71811f89c58ae104aa39b0c9016d0565,
+      type: 3}
+    SpaceStationDoor: {fileID: 862376273751566294, guid: d1edd50aab87dd648a8ee641301a08ad,
       type: 3}
     GridSize: {x: 6, y: 6, z: 6}
     ModuleSpacing: 7

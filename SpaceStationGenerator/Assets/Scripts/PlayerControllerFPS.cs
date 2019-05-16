@@ -12,12 +12,12 @@ public class PlayerControllerFPS : MonoBehaviour
     
     void Start()
     {
-        /*initialPosition = new Vector3((_gameSettings.GridSize / 2) * _gameSettings.ModuleSpacing,
-                                      (_gameSettings.GridSize / 2) * _gameSettings.ModuleSpacing + 1,
-                                      (_gameSettings.GridSize / 2) * _gameSettings.ModuleSpacing);
+        initialPosition = new Vector3((_gameSettings.GridSize.x / 2) * _gameSettings.ModuleSpacing,
+                                      (_gameSettings.GridSize.x / 2) * _gameSettings.ModuleSpacing + 1,
+                                      (_gameSettings.GridSize.x / 2) * _gameSettings.ModuleSpacing);
         
         this.transform.position = initialPosition;
-        StartCoroutine(wait());*/
+       // StartCoroutine(wait());
     }
 
     IEnumerator wait()

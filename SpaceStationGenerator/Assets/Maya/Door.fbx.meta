@@ -1,19 +1,14 @@
 fileFormatVersion: 2
-guid: 6c8206f9076e3b54e9c422fd2f3f77ba
+guid: 0573e7e489b42ee4c800906b55aad5f7
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
-    100002: Station2
     400000: //RootNode
-    400002: Station2
     2100000: lambert1
     2300000: //RootNode
-    2300002: Station2
     3300000: //RootNode
-    3300002: Station2
-    4300000: Station
-    4300002: Station2
+    4300000: pCube18
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -69,7 +64,7 @@ ModelImporter:
     previousCalculatedGlobalScale: 1
     hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
-    normalSmoothAngle: 0
+    normalSmoothAngle: 60
     normalImportMode: 1
     tangentImportMode: 2
     normalCalculationMode: 4

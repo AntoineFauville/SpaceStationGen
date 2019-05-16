@@ -12,9 +12,8 @@ public class GameInstaller : MonoInstaller {
         Container.BindInterfacesAndSelfTo<PlayerControllerFPS>()
            .FromComponentInNewPrefab(_gameSettings.PlayerController)
            .AsSingle().NonLazy();
-        //Container.Bind<Vehicule>()
-        //    .FromResolveGetter<PlayerController>(playerController => playerController.GetVehicule())
-        //    .AsSingle().NonLazy();
+        Container.Bind<DoorCheckerFactory>()
+           .AsSingle().NonLazy();
         Container.Bind<EntityFactory>()
             .AsSingle().NonLazy();
     }

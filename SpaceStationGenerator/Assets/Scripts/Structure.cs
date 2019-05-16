@@ -51,13 +51,13 @@ public class Structure : MonoBehaviour
 
                     if (position == initialPosition)
                     {
-                        Entity baseModule = ModuleFactory.CreateEntity(position, ModuleParent.transform, SpacepointType.Module);
+                        Entity baseModule = ModuleFactory.CreateEntity(position, ModuleParent.transform, SpacepointType.Module, this);
                         modules.Add(baseModule);
                         modulesPoints.Add(baseModule.modulePosition);
                     }
                     else
                     {
-                        Entity spacePoint = ModuleFactory.CreateEntity(position, freePointParent.transform, SpacepointType.SpacePoint);
+                        Entity spacePoint = ModuleFactory.CreateEntity(position, freePointParent.transform, SpacepointType.SpacePoint, this);
                         freePoints.Add(position);
                     }
 
@@ -77,7 +77,7 @@ public class Structure : MonoBehaviour
 
             if (freePoints.Contains(newModulePosition))
             {
-                Entity Module = ModuleFactory.CreateEntity(newModulePosition, ModuleParent.transform, SpacepointType.Module);
+                Entity Module = ModuleFactory.CreateEntity(newModulePosition, ModuleParent.transform, SpacepointType.Module, this);
                 modules.Add(Module);
                 modulesPoints.Add(Module.modulePosition);
                 freePoints.Remove(newModulePosition);
@@ -89,6 +89,11 @@ public class Structure : MonoBehaviour
         EditorUtility.DisplayProgressBar("Creating Space Station", "Finishing Up Progress", smoothProgress / totalProgress);
 
         AssignNeighbours();
+
+        for (int i = 0; i < modules.Count; i++)
+        {
+            modules[i].SetupVisuals();
+        }
 
         EditorUtility.ClearProgressBar();
     }
@@ -171,5 +176,44 @@ public class Structure : MonoBehaviour
         {
             modules[i].Neightbours = GetNeighboursForModule(modules[i]);
         }
+    }
+
+    public Quaternion GetDirectionForNewModule(Entity moduleBase, Entity moduleNew)
+    {
+        Quaternion orientation = new Quaternion();
+
+        Vector3 moduleBasePosition = moduleBase.modulePosition;
+
+        if (moduleNew.modulePosition.x > moduleBasePosition.x)
+        {
+            orientation.eulerAngles = new Vector3(0,90,0);
+        }
+
+        if (moduleNew.modulePosition.x < moduleBasePosition.x)
+        {
+            orientation.eulerAngles = new Vector3(0, -90, 0);
+        }
+
+        if (moduleNew.modulePosition.y > moduleBasePosition.y)
+        {
+            orientation.eulerAngles = new Vector3(-90, 0, 0);
+        }
+
+        if (moduleNew.modulePosition.y < moduleBasePosition.y)
+        {
+            orientation.eulerAngles = new Vector3(90, 0, 0);
+        }
+
+        if (moduleNew.modulePosition.z > moduleBasePosition.z)
+        {
+            orientation.eulerAngles = new Vector3(0, 0, 0);
+        }
+
+        if (moduleNew.modulePosition.z < moduleBasePosition.z)
+        {
+            orientation.eulerAngles = new Vector3(0, 180, 0);
+        }
+
+        return orientation;
     }
 }
