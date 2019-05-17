@@ -12,6 +12,7 @@ public class Entity : MonoBehaviour
     private SpacepointType _type;
     public ModuleType _moduleType;
     private Structure _structure;
+    public EntityData EntityData;
 
     public void SetupReferences(GameSettings gameSettings, Vector3 position, string name, SpacepointType type, Structure structure)
     {
@@ -28,27 +29,27 @@ public class Entity : MonoBehaviour
         {
             if (Neightbours.Count == 1)
             {
-                _moduleType = ModuleType.SolarPanel;
+                EntityData = _gameSettings.SolarPanelModuleData;
             }
             else if(Neightbours.Count == 2)
             {
-                _moduleType = ModuleType.Small;
+                EntityData = _gameSettings.SmallModuleData;
             }
             else if (Neightbours.Count == 3)
             {
-                _moduleType = ModuleType.LifeSupport;
+                EntityData = _gameSettings.LifeModuleData;
             }
             else if (Neightbours.Count == 4)
             {
-                _moduleType = ModuleType.Standart;
+                EntityData = _gameSettings.StandartModuleData;
             }
             else if (Neightbours.Count == 5)
             {
-                _moduleType = ModuleType.Large;
+                EntityData = _gameSettings.LargeModuleData;
             }
             else
             {
-                _moduleType = ModuleType.Thick;
+                EntityData = _gameSettings.ThickModuleData;
             }
 
             VisualFactory(_moduleType);
@@ -58,41 +59,12 @@ public class Entity : MonoBehaviour
 
     void VisualFactory(ModuleType visualType)
     {
-        if (_moduleType == ModuleType.LifeSupport)
+        GameObject visuals = Object.Instantiate(EntityData.Prefab);
+        visuals.transform.SetParent(this.transform);
+        visuals.transform.localPosition = new Vector3(0, 0, 0);
+
+        if (EntityData.ModuleType == ModuleType.SolarPanel)
         {
-            GameObject visuals = Object.Instantiate(_gameSettings.SpaceStationLife);
-            visuals.transform.SetParent(this.transform);
-            visuals.transform.localPosition = new Vector3(0, 0, 0);
-        }
-        else if (_moduleType == ModuleType.Standart)
-        {
-            GameObject visuals = Object.Instantiate(_gameSettings.SpaceStationModule);
-            visuals.transform.SetParent(this.transform);
-            visuals.transform.localPosition = new Vector3(0, 0, 0);
-        }
-        else if (_moduleType == ModuleType.Small)
-        {
-            GameObject visuals = Object.Instantiate(_gameSettings.SpaceStationSmall);
-            visuals.transform.SetParent(this.transform);
-            visuals.transform.localPosition = new Vector3(0, 0, 0);
-        }
-        else if (_moduleType == ModuleType.Large)
-        {
-            GameObject visuals = Object.Instantiate(_gameSettings.SpaceStationLarge);
-            visuals.transform.SetParent(this.transform);
-            visuals.transform.localPosition = new Vector3(0, 0, 0);
-        }
-        else if (_moduleType == ModuleType.Thick)
-        {
-            GameObject visuals = Object.Instantiate(_gameSettings.SpaceStationThick);
-            visuals.transform.SetParent(this.transform);
-            visuals.transform.localPosition = new Vector3(0, 0, 0);
-        }
-        else if (_moduleType == ModuleType.SolarPanel)
-        {
-            GameObject visuals = Object.Instantiate(_gameSettings.SpaceStationSolarPanel);
-            visuals.transform.SetParent(this.transform);
-            visuals.transform.localPosition = new Vector3(0, 0, 0);
             visuals.transform.rotation = _structure.GetDirectionForNewModule(Neightbours[0], this);
         }
     }

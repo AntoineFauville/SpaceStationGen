@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d2c68c21ab719d4c858b80a22f42db0, type: 3}
+  m_Name: 3_LifeSupport
+  m_EditorClassIdentifier: 
+  ModuleType: 2
+  Health: 5
+  StorageCapacity: 26
+  EnergyProduction: 4
+  BedAmount: 0
+  LifeHealingCapacity: 10
+  Prefab: {fileID: 5679376719735367756, guid: 15598e163f8ba0e429e2aa75134a4c5d, type: 3}

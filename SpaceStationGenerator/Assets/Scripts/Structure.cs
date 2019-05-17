@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 using Zenject;
+using UnityEngine.UI;
 
 public class Structure : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class Structure : MonoBehaviour
     public GameObject freePointParent;
     public GameObject ModuleParent;
 
-    public List<Entity> modules = new List<Entity>();
+    public List<Entity> Entities = new List<Entity>();
 
     public List<Vector3> freePoints = new List<Vector3>();
     public List<Vector3> modulesPoints = new List<Vector3>();
@@ -20,6 +21,8 @@ public class Structure : MonoBehaviour
     private Vector3 _gridSize;
     private int _moduleSpacing;
     private int _moduleAmount;
+    
+    private string informationToDisplay;
 
     public void RefreshStats(Vector3 gridSize, int moduleSpacing, int moduleAmount)
     {
@@ -27,8 +30,7 @@ public class Structure : MonoBehaviour
         _moduleSpacing = moduleSpacing;
         _moduleAmount = moduleAmount;
     }
-
-
+    
     public void CreateSpaceStation()
     {
         float smoothProgress = 0;
@@ -52,7 +54,7 @@ public class Structure : MonoBehaviour
                     if (position == initialPosition)
                     {
                         Entity baseModule = ModuleFactory.CreateEntity(position, ModuleParent.transform, SpacepointType.Module, this);
-                        modules.Add(baseModule);
+                        Entities.Add(baseModule);
                         modulesPoints.Add(baseModule.modulePosition);
                     }
                     else
@@ -78,7 +80,7 @@ public class Structure : MonoBehaviour
             if (freePoints.Contains(newModulePosition))
             {
                 Entity Module = ModuleFactory.CreateEntity(newModulePosition, ModuleParent.transform, SpacepointType.Module, this);
-                modules.Add(Module);
+                Entities.Add(Module);
                 modulesPoints.Add(Module.modulePosition);
                 freePoints.Remove(newModulePosition);
                 DestroyImmediate(GameObject.Find(newModulePosition.ToString()));
@@ -90,12 +92,13 @@ public class Structure : MonoBehaviour
 
         AssignNeighbours();
 
-        for (int i = 0; i < modules.Count; i++)
+        for (int i = 0; i < Entities.Count; i++)
         {
-            modules[i].SetupVisuals();
+            Entities[i].SetupVisuals();
         }
 
         EditorUtility.ClearProgressBar();
+        DisplayInformation();
     }
     
     public List<Entity> GetNeighboursForModule(Entity module)
@@ -125,11 +128,11 @@ public class Structure : MonoBehaviour
         possibleSpot = module.modulePosition + newVectorPossiblePos;
         if (possibleSpot != null && modulesPoints.Contains(possibleSpot))
         {
-            for (int i = 0; i < modules.Count; i++)
+            for (int i = 0; i < Entities.Count; i++)
             {
-                if (modules[i].modulePosition == possibleSpot)
+                if (Entities[i].modulePosition == possibleSpot)
                 {
-                    neightbours.Add(modules[i]);
+                    neightbours.Add(Entities[i]);
                 }
             }
         }
@@ -139,20 +142,20 @@ public class Structure : MonoBehaviour
     {
         List<Vector3> freeSpots = new List<Vector3>();
 
-        for (int i = 0; i < modules.Count; i++)
+        for (int i = 0; i < Entities.Count; i++)
         {
             //+x
-            PositionCheckFreeNeighbours(freeSpots, new Vector3(1 * _moduleSpacing, 0, 0), modules[i]);
+            PositionCheckFreeNeighbours(freeSpots, new Vector3(1 * _moduleSpacing, 0, 0), Entities[i]);
             //-x
-            PositionCheckFreeNeighbours(freeSpots, new Vector3(-1 * _moduleSpacing, 0, 0), modules[i]);
+            PositionCheckFreeNeighbours(freeSpots, new Vector3(-1 * _moduleSpacing, 0, 0), Entities[i]);
             //+y
-            PositionCheckFreeNeighbours(freeSpots, new Vector3(0, 1 * _moduleSpacing, 0), modules[i]);
+            PositionCheckFreeNeighbours(freeSpots, new Vector3(0, 1 * _moduleSpacing, 0), Entities[i]);
             //-y
-            PositionCheckFreeNeighbours(freeSpots, new Vector3(0, -1 * _moduleSpacing, 0), modules[i]);
+            PositionCheckFreeNeighbours(freeSpots, new Vector3(0, -1 * _moduleSpacing, 0), Entities[i]);
             //+z
-            PositionCheckFreeNeighbours(freeSpots, new Vector3(0, 0, -1 * _moduleSpacing), modules[i]);
+            PositionCheckFreeNeighbours(freeSpots, new Vector3(0, 0, -1 * _moduleSpacing), Entities[i]);
             //-z
-            PositionCheckFreeNeighbours(freeSpots, new Vector3(0, 0, 1 * _moduleSpacing), modules[i]);
+            PositionCheckFreeNeighbours(freeSpots, new Vector3(0, 0, 1 * _moduleSpacing), Entities[i]);
         }
             
         return freeSpots;
@@ -172,9 +175,9 @@ public class Structure : MonoBehaviour
 
     void AssignNeighbours()
     {
-        for (int i = 0; i < modules.Count; i++)
+        for (int i = 0; i < Entities.Count; i++)
         {
-            modules[i].Neightbours = GetNeighboursForModule(modules[i]);
+            Entities[i].Neightbours = GetNeighboursForModule(Entities[i]);
         }
     }
 
@@ -215,5 +218,70 @@ public class Structure : MonoBehaviour
         }
 
         return orientation;
+    }
+
+    void DisplayInformation()
+    {
+        informationToDisplay = "";
+
+        Text textInformation = GameObject.Find("InformationsText").GetComponent<Text>();
+        
+        informationToDisplay += "Life Amount : " + LifeCount().ToString();
+        informationToDisplay += "\n" + "Storage Capacity : " + StorageCount().ToString();
+        informationToDisplay += "\n" + "Energy Production : " + EnergyCount().ToString();
+        informationToDisplay += "\n" + "Bed Amount : " + LifeCount().ToString();
+        informationToDisplay += "\n" + "Crew Healing Bed : " + LifeCount().ToString();
+
+        textInformation.text = informationToDisplay;
+    }
+
+    int LifeCount()
+    {
+        int structureLifeAmount = 0;
+        for (int i = 0; i < Entities.Count; i++)
+        {
+            structureLifeAmount += Entities[i].EntityData.Health;
+        }
+        return structureLifeAmount;
+    }
+
+    int StorageCount()
+    {
+        int structureStorageAmount = 0;
+        for (int i = 0; i < Entities.Count; i++)
+        {
+            structureStorageAmount += Entities[i].EntityData.StorageCapacity;
+        }
+        return structureStorageAmount;
+    }
+
+    int EnergyCount()
+    {
+        int structureEnergyAmount = 0;
+        for (int i = 0; i < Entities.Count; i++)
+        {
+            structureEnergyAmount += Entities[i].EntityData.EnergyProduction;
+        }
+        return structureEnergyAmount;
+    }
+
+    int BedCount()
+    {
+        int structureBedAmount = 0;
+        for (int i = 0; i < Entities.Count; i++)
+        {
+            structureBedAmount += Entities[i].EntityData.BedAmount;
+        }
+        return structureBedAmount;
+    }
+
+    int CrewHealingCount()
+    {
+        int structureCrewHealingAmount = 0;
+        for (int i = 0; i < Entities.Count; i++)
+        {
+            structureCrewHealingAmount += Entities[i].EntityData.LifeHealingCapacity;
+        }
+        return structureCrewHealingAmount;
     }
 }

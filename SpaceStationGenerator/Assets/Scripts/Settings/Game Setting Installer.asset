@@ -21,16 +21,14 @@ MonoBehaviour:
       type: 3}
     SpaceStationModule: {fileID: 1620500051104442208, guid: e59994292f0801c4aaa8c87d95c898e8,
       type: 3}
-    SpaceStationSmall: {fileID: 7115267973131698823, guid: 22d325dae0e43474e8679f9f55399c16,
-      type: 3}
-    SpaceStationLarge: {fileID: 5272582169239065678, guid: 3a18c80ab03d0e9449fc94f4b6409351,
-      type: 3}
-    SpaceStationThick: {fileID: 8337282473638474605, guid: 78726e7cde651434ebb50d6cc834d870,
-      type: 3}
-    SpaceStationLife: {fileID: 5679376719735367756, guid: 15598e163f8ba0e429e2aa75134a4c5d,
-      type: 3}
-    SpaceStationSolarPanel: {fileID: 1620500051104442208, guid: 71593bf53bcbb424688ad3bac11a6ba1,
-      type: 3}
+    StandartModuleData: {fileID: 11400000, guid: a56af2fb205366249b7fa7ebee880864,
+      type: 2}
+    SmallModuleData: {fileID: 11400000, guid: efef79d7354336b47ab458706585b3a4, type: 2}
+    LargeModuleData: {fileID: 11400000, guid: 1b8322203ad9b494aa5d37b3b4453b33, type: 2}
+    ThickModuleData: {fileID: 11400000, guid: a9f683213b31288488ac7a9a3e2653c8, type: 2}
+    LifeModuleData: {fileID: 11400000, guid: 06a47d44cf9b1aa408b74a208cb8a401, type: 2}
+    SolarPanelModuleData: {fileID: 11400000, guid: 4c613aa270cd0e441a29ab5edd7a1a4b,
+      type: 2}
     SpaceStationConnection: {fileID: 8176616987690061222, guid: 71811f89c58ae104aa39b0c9016d0565,
       type: 3}
     SpaceStationDoor: {fileID: 862376273751566294, guid: d1edd50aab87dd648a8ee641301a08ad,

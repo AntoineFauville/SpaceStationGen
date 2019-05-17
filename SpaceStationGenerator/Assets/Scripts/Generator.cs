@@ -71,7 +71,7 @@ public class Generator : MonoBehaviour
             {
                 GameObject.Destroy(child.gameObject);
             }
-            _structure.modules.RemoveRange(0,_structure.modules.Count);
+            _structure.Entities.RemoveRange(0,_structure.Entities.Count);
             _structure.freePoints.RemoveRange(0, _structure.freePoints.Count);
             _structure.CreateSpaceStation();
         }

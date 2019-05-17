@@ -11,11 +11,14 @@ public class GameSettings
     public Structure Structure;
     public Entity Module;
     public GameObject SpaceStationModule;
-    public GameObject SpaceStationSmall;
-    public GameObject SpaceStationLarge;
-    public GameObject SpaceStationThick;
-    public GameObject SpaceStationLife;
-    public GameObject SpaceStationSolarPanel;
+    public EntityData StandartModuleData;
+    
+    public EntityData SmallModuleData;
+    public EntityData LargeModuleData;
+    public EntityData ThickModuleData;
+    public EntityData LifeModuleData;
+    public EntityData SolarPanelModuleData;
+
     public GameObject SpaceStationConnection;
     public GameObject SpaceStationDoor;
 
